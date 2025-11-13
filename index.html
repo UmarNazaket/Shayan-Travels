@@ -153,6 +153,28 @@
             transition: all 0.3s;
             position: relative;
         }
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: linear-gradient(135deg, #ff6b00, #ffb800);
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -472,8 +494,31 @@
             .section { padding: 80px 30px; }
             .section-title { font-size: 2.5em; }
             .cars-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: 1fr; }
             nav { padding: 20px 30px; }
-            .nav-links { gap: 20px; font-size: 0.9em; }
+            .nav-logo { font-size: 1.3em; }
+            .mobile-menu-toggle { display: flex; }
+            .nav-links { 
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: rgba(15, 15, 15, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 30px;
+                gap: 25px;
+                transform: translateY(-120%);
+                transition: transform 0.3s ease;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            .nav-links a {
+                font-size: 1.1em;
+                padding: 10px 0;
+            }
             .contact-info { flex-direction: column; align-items: center; }
         }
     </style>
@@ -481,11 +526,16 @@
 <body>
     <nav>
         <div class="nav-logo">Shayan Tours</div>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#fleet">Our Fleet</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" onclick="closeMobileMenu()">Home</a>
+            <a href="#fleet" onclick="closeMobileMenu()">Our Fleet</a>
+            <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+            <a href="#contact" onclick="closeMobileMenu()">Contact</a>
         </div>
     </nav>
     <section class="hero" id="home">
@@ -644,6 +694,20 @@
 
         function openFacebook() {
             window.open('https://www.facebook.com/share/1G1Amr2CuX/', '_blank');
+        }
+
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            navLinks.classList.remove('active');
+            toggle.classList.remove('active');
         }
 
         // Smooth scrolling
