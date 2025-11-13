@@ -10,7 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
             overflow-x: hidden;
@@ -18,7 +17,6 @@
             color: #ffffff;
             line-height: 1.6;
         }
-
         .hero {
             position: relative;
             height: 100vh;
@@ -28,7 +26,6 @@
             justify-content: center;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -38,7 +35,6 @@
                 radial-gradient(circle at 20% 50%, rgba(255, 107, 0, 0.15) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(255, 184, 0, 0.15) 0%, transparent 50%);
         }
-
         .hero::after {
             content: '';
             position: absolute;
@@ -50,12 +46,10 @@
             background-size: 60px 60px;
             animation: grid 30s linear infinite;
         }
-
         @keyframes grid {
             0% { transform: translate(0, 0); }
             100% { transform: translate(60px, 60px); }
         }
-
         .hero-content {
             position: relative;
             z-index: 2;
@@ -64,7 +58,6 @@
             max-width: 900px;
             animation: fadeInUp 1s ease;
         }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -75,7 +68,6 @@
                 transform: translateY(0);
             }
         }
-
         .logo {
             font-size: 4em;
             font-weight: 800;
@@ -87,20 +79,17 @@
             letter-spacing: -2px;
             animation: shine 3s linear infinite;
         }
-
         @keyframes shine {
             to {
                 background-position: 200% center;
             }
         }
-
         .tagline {
             font-size: 1.4em;
             margin-bottom: 40px;
             color: #b0b0b0;
             font-weight: 300;
         }
-
         .cta-button {
             display: inline-block;
             padding: 18px 50px;
@@ -115,7 +104,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .cta-button::before {
             content: '';
             position: absolute;
@@ -126,16 +114,13 @@
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
             transition: left 0.5s;
         }
-
         .cta-button:hover::before {
             left: 100%;
         }
-
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 50px rgba(255, 107, 0, 0.5);
         }
-
         nav {
             position: fixed;
             top: 0;
@@ -149,7 +134,6 @@
             align-items: center;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         .nav-logo {
             font-size: 1.6em;
             font-weight: 800;
@@ -158,12 +142,10 @@
             -webkit-text-fill-color: transparent;
             letter-spacing: -1px;
         }
-
         .nav-links {
             display: flex;
             gap: 40px;
         }
-
         .nav-links a {
             color: #b0b0b0;
             text-decoration: none;
@@ -171,14 +153,12 @@
             transition: all 0.3s;
             position: relative;
         }
-
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             gap: 30px;
             margin-top: 60px;
         }
-
         .gallery-item {
             border-radius: 20px;
             overflow: hidden;
@@ -187,12 +167,10 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
         }
-
         .gallery-item:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 60px rgba(255, 107, 0, 0.3);
         }
-
         .gallery-item img {
             width: 100%;
             height: 100%;
@@ -200,11 +178,9 @@
             display: block;
             transition: transform 0.4s;
         }
-
         .gallery-item:hover img {
             transform: scale(1.05);
         }
-
         .gallery-overlay {
             position: absolute;
             bottom: 0;
@@ -215,17 +191,14 @@
             transform: translateY(100%);
             transition: transform 0.4s;
         }
-
         .gallery-item:hover .gallery-overlay {
             transform: translateY(0);
         }
-
         .gallery-title {
             color: #fff;
             font-size: 1.3em;
             font-weight: 700;
         }
-
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -236,21 +209,17 @@
             background: linear-gradient(135deg, #ff6b00, #ffb800);
             transition: width 0.3s;
         }
-
         .nav-links a:hover {
             color: #ff6b00;
         }
-
         .nav-links a:hover::after {
             width: 100%;
         }
-
         .section {
             padding: 120px 60px;
             max-width: 1400px;
             margin: 0 auto;
         }
-
         .section-title {
             font-size: 3.5em;
             margin-bottom: 20px;
@@ -258,7 +227,6 @@
             font-weight: 800;
             letter-spacing: -2px;
         }
-
         .section-subtitle {
             text-align: center;
             color: #888;
@@ -266,14 +234,12 @@
             margin-bottom: 80px;
             font-weight: 300;
         }
-
         .cars-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 40px;
             margin-top: 50px;
         }
-
         .car-card {
             background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
             border-radius: 24px;
@@ -282,7 +248,6 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
         }
-
         .car-card::before {
             content: '';
             position: absolute;
@@ -299,16 +264,13 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
-
         .car-card:hover::before {
             opacity: 1;
         }
-
         .car-card:hover {
             transform: translateY(-12px);
             box-shadow: 0 30px 60px rgba(255, 107, 0, 0.2);
         }
-
         .car-image {
             width: 100%;
             height: 280px;
@@ -320,7 +282,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .car-image::before {
             content: '';
             position: absolute;
@@ -330,11 +291,9 @@
             opacity: 0;
             transition: opacity 0.4s;
         }
-
         .car-card:hover .car-image::before {
             opacity: 1;
         }
-
         .car-image::after {
             content: '';
             position: absolute;
@@ -344,22 +303,18 @@
             transform: translateX(-100%);
             transition: transform 0.6s;
         }
-
         .car-card:hover .car-image::after {
             transform: translateX(100%);
         }
-
         .car-info {
             padding: 35px;
         }
-
         .car-name {
             font-size: 2em;
             margin-bottom: 10px;
             font-weight: 700;
             letter-spacing: -1px;
         }
-
         .car-type {
             color: #ff6b00;
             font-size: 0.9em;
@@ -368,12 +323,10 @@
             letter-spacing: 2px;
             margin-bottom: 20px;
         }
-
         .car-features {
             list-style: none;
             margin: 25px 0;
         }
-
         .car-features li {
             padding: 10px 0;
             color: #b0b0b0;
@@ -381,14 +334,12 @@
             align-items: center;
             gap: 12px;
         }
-
         .car-features li::before {
             content: "→";
             color: #ff6b00;
             font-weight: bold;
             font-size: 1.2em;
         }
-
         .book-btn {
             width: 100%;
             padding: 18px;
@@ -403,7 +354,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .book-btn::before {
             content: '';
             position: absolute;
@@ -416,24 +366,20 @@
             transform: translate(-50%, -50%);
             transition: width 0.5s, height 0.5s;
         }
-
         .book-btn:hover::before {
             width: 300px;
             height: 300px;
         }
-
         .book-btn:hover {
             transform: scale(1.02);
             box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
         }
-
         .contact-section {
             background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
             padding: 100px 60px;
             position: relative;
             overflow: hidden;
         }
-
         .contact-section::before {
             content: '';
             position: absolute;
@@ -443,7 +389,6 @@
                 radial-gradient(circle at 30% 50%, rgba(255, 107, 0, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 70% 50%, rgba(255, 184, 0, 0.1) 0%, transparent 50%);
         }
-
         .contact-content {
             position: relative;
             z-index: 2;
@@ -451,7 +396,6 @@
             margin: 0 auto;
             text-align: center;
         }
-
         .contact-info {
             display: flex;
             justify-content: center;
@@ -459,7 +403,6 @@
             flex-wrap: wrap;
             margin-top: 60px;
         }
-
         .contact-item {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px);
@@ -468,37 +411,35 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.4s;
             min-width: 280px;
+            cursor: pointer;
         }
-
         .contact-item:hover {
             background: rgba(255, 255, 255, 0.05);
             transform: translateY(-8px);
             border-color: rgba(255, 107, 0, 0.3);
         }
-
+        .contact-item.clickable:active {
+            transform: translateY(-5px) scale(0.98);
+        }
         .contact-icon {
             font-size: 3em;
             margin-bottom: 20px;
         }
-
         .contact-item h3 {
             font-size: 1.4em;
             margin-bottom: 15px;
             font-weight: 700;
         }
-
         .contact-item p {
             font-size: 1.1em;
             color: #b0b0b0;
             margin: 8px 0;
         }
-
         .contact-item .highlight {
             color: #ff6b00;
             font-weight: 600;
             font-size: 1.2em;
         }
-
         .social-link {
             display: inline-block;
             margin-top: 50px;
@@ -512,24 +453,20 @@
             transition: all 0.3s;
             box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
         }
-
         .social-link:hover {
             transform: translateY(-5px) scale(1.05);
             box-shadow: 0 15px 40px rgba(255, 107, 0, 0.5);
         }
-
         footer {
             background: #0a0a0a;
             padding: 50px;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         footer p {
             color: #666;
             margin: 8px 0;
         }
-
         @media (max-width: 768px) {
             .logo { font-size: 2.8em; }
             .section { padding: 80px 30px; }
@@ -551,7 +488,6 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
-
     <section class="hero" id="home">
         <div class="hero-content">
             <h1 class="logo">Shayan Tours And Travels</h1>
@@ -559,7 +495,6 @@
             <a href="#fleet" class="cta-button">Explore Our Fleet</a>
         </div>
     </section>
-
     <section class="section" id="fleet">
         <h2 class="section-title">Our Premium Fleet</h2>
         <p class="section-subtitle">Choose from our diverse range of vehicles tailored to your journey</p>
@@ -579,7 +514,6 @@
                     <button class="book-btn" onclick="bookNow('Coasters')">Book Now</button>
                 </div>
             </div>
-
             <div class="car-card">
                 <div class="car-image"><img src="./img/haice.jpeg" width="100%" alt="" srcset=""></div>
                 <div class="car-info">
@@ -594,7 +528,6 @@
                     <button class="book-btn" onclick="bookNow('Toyota Hiace')">Book Now</button>
                 </div>
             </div>
-
             <div class="car-card">
                 <div class="car-image"><img src="./img/cabin.jpeg" width="100%" alt="" srcset=""></div>
                 <div class="car-info">
@@ -609,7 +542,6 @@
                     <button class="book-btn" onclick="bookNow('Grand Cabin')">Book Now</button>
                 </div>
             </div>
-
             <div class="car-card">
                 <div class="car-image"><img src="./img/brv.jpeg" width="100%" alt="" srcset=""></div>
                 <div class="car-info">
@@ -624,7 +556,6 @@
                     <button class="book-btn" onclick="bookNow('BRV & HRV')">Book Now</button>
                 </div>
             </div>
-
             <div class="car-card">
                 <div class="car-image"><img src="./img/corolla.jpeg" width="100%" alt="" srcset=""></div>
                 <div class="car-info">
@@ -641,46 +572,44 @@
             </div>
         </div>
     </section>
-
     <section class="section" id="gallery">
         <h2 class="section-title">My Car Collection</h2>
         <p class="section-subtitle">Our diverse fleet ready to serve your travel needs</p>
         
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="./img/collection1.jpeg" alt="Shayan Tours Fleet at Pakistan Monument" onerror="this.style.background='linear-gradient(135deg, #2a2a2a, #1a1a1a)'; this.style.height='400px'; this.alt='Fleet Collection 1';">
+                <img src="./img/collection1.jpeg" alt="Shayan Tours Fleet at Pakistan Monument">
                 <div class="gallery-overlay">
                     <p class="gallery-title">Our Premium Fleet Collection</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="./img/collection23.jpeg" width="100%" alt="Complete Vehicle Lineup" onerror="this.style.background='linear-gradient(135deg, #2a2a2a, #1a1a1a)'; this.style.height='400px'; this.alt='Fleet Collection 2';">
+                <img src="./img/collection23.jpeg" width="100%" alt="Complete Vehicle Lineup">
                 <div class="gallery-overlay">
                     <p class="gallery-title">Complete Vehicle Lineup</p>
                 </div>
             </div>
         </div>
     </section>
-
     <section class="contact-section" id="contact">
         <div class="contact-content">
             <h2 class="section-title">Ready to Hit the Road?</h2>
             <p class="section-subtitle">Get in touch with us for bookings and inquiries</p>
             
             <div class="contact-info">
-                <div class="contact-item">
+                <div class="contact-item clickable" onclick="makeCall()">
                     <div class="contact-icon">📞</div>
                     <h3>Call Us</h3>
                     <p>Sardar Kashif</p>
                     <p class="highlight">+92 316 0585274</p>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item clickable" onclick="openWhatsApp()">
                     <div class="contact-icon">💬</div>
                     <h3>WhatsApp</h3>
                     <p>Instant Response</p>
                     <p class="highlight">+92 316 0585274</p>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item clickable" onclick="openFacebook()">
                     <div class="contact-icon">👍</div>
                     <h3>Follow Us</h3>
                     <p>Stay Updated</p>
@@ -691,18 +620,30 @@
             <a href="https://www.facebook.com/share/1G1Amr2CuX/" target="_blank" class="social-link">Visit Our Facebook Page</a>
         </div>
     </section>
-
     <footer>
         <p style="font-size: 1.1em; color: #888; margin-bottom: 15px; font-weight: 600;">Shayan Tours And Travels</p>
         <p>&copy; 2024 Shayan Tours And Travels. All rights reserved.</p>
         <p>Premium Car Rental Services Across Pakistan</p>
     </footer>
-
     <script>
         function bookNow(carType) {
             const phone = '+923160585274';
             const message = encodeURIComponent(`Hello Shayan Tours! I'm interested in booking a ${carType}. Please provide me with availability and pricing details.`);
             window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+
+        function makeCall() {
+            window.location.href = 'tel:+923160585274';
+        }
+
+        function openWhatsApp() {
+            const phone = '+923160585274';
+            const message = encodeURIComponent('Hello Shayan Tours! I would like to inquire about your car rental services.');
+            window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
+        }
+
+        function openFacebook() {
+            window.open('https://www.facebook.com/share/1G1Amr2CuX/', '_blank');
         }
 
         // Smooth scrolling
@@ -715,7 +656,6 @@
                 }
             });
         });
-
         // Animate cards on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -725,7 +665,6 @@
                 }
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.car-card').forEach((card, index) => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(30px)';
